@@ -1,212 +1,253 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Маникюр и Педикюр в Костанае | Roha Nail — Баймагамбетова 160</title>
-  <meta name="description" content="Профессиональный маникюр, смарт-педикюр и авторский дизайн в центре Костаная. Стерильные инструменты и качественные материалы в студии Roha Nail.">
-  <meta name="keywords" content="маникюр костанай, педикюр костанай, роха нейл, ногти костанай, баймагамбетова 160 маникюр">
-  
-  <meta property="og:title" content="Roha Nail Костанай | Эстетика твоих рук">
-  <meta property="og:description" content="Записывайся на идеальный маникюр в центре города.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rohanail.kz"> <meta property="og:image" content="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTART DETAILING | Premium Auto Care</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "Roha Nail",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ул. Баймагамбетова, 160, 4 этаж, 436 кабинет",
-      "addressLocality": "Костанай",
-      "addressCountry": "KZ"
-    },
-    "telephone": "+77762692129",
-    "priceRange": "1000KZT - 10000KZT",
-    "url": "https://rohanail.kz"
-  }
-  </script>
+        :root {
+            --gold: #c5a059;
+            --dark-bg: #050505;
+            --card-bg: #111111;
+            --accent: #e63946;
+            --text: #ffffff;
+        }
 
-  <style>
-    :root {
-      --accent: #f8bbd0;
-      --dark: #1a1a1a;
-      --text: #ffffff;
-      --gray: #b0b0b0;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #000;
-      color: var(--text);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
-    .logo { font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
-    nav a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 13px; text-transform: uppercase; }
-    
-    .hero {
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                  url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=2070') center/cover no-repeat;
-    }
-    .hero h1 { font-size: 42px; margin: 0; font-weight: 300; text-transform: uppercase; }
-    .hero p { color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-top: 10px; }
-    
-    .section { padding: 60px 20px; max-width: 1100px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 40px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    
-    /* СТИЛИ ДЛЯ ФОТО РАБОТ */
-    .work-card img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-    .work-card img:hover { transform: scale(1.02); }
-    
-    .price-group { background: #111; padding: 30px; border-radius: 15px; border: 1px solid #222; }
-    .price-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #222; }
-    .price-item:last-child { border: none; }
-    .price-val { color: var(--accent); font-weight: bold; }
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
 
-    .info-card { background: #111; padding: 25px; border-radius: 15px; text-align: center; border-top: 3px solid var(--accent); }
+        /* Hero Section with Video Background Overlay */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+                        url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2070&auto=format&fit=crop') center/cover;
+            padding: 20px;
+        }
 
-    /* СТИЛИ ДЛЯ ОТЗЫВОВ С КАРТИНКАМИ */
-    .review-card { background: #111; padding: 20px; border-radius: 15px; border: 1px solid #222; }
-    .review-img { 
-      width: 100%; 
-      height: 200px; 
-      object-fit: cover; 
-      border-radius: 10px; 
-      margin-bottom: 15px; 
-    }
-    .review-text { font-style: italic; font-size: 14px; margin-bottom: 10px; display: block; }
-    .review-author { color: var(--accent); font-weight: bold; font-size: 13px; }
+        .hero-content {
+            z-index: 2;
+            max-width: 900px;
+        }
 
-    .btn {
-      background: var(--accent);
-      padding: 15px 35px;
-      border-radius: 50px;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 30px;
-      transition: 0.3s;
-    }
-    .btn:hover { transform: scale(1.05); background: #fff; }
+        .brand-badge {
+            font-size: 0.9rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
 
-    footer { padding: 40px; text-align: center; border-top: 1px solid #222; color: var(--gray); font-size: 13px; }
-  </style>
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ccc;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-premium {
+            display: inline-block;
+            padding: 20px 50px;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-premium:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 30px rgba(255,255,255,0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 5%;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+            text-align: left;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .line {
+            width: 100px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 60px 40px;
+            position: relative;
+            transition: 0.4s;
+            border: 1px solid #222;
+        }
+
+        .service-card:hover {
+            background: #1a1a1a;
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+
+        .service-number {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.03);
+            transition: 0.4s;
+        }
+
+        .service-card:hover .service-number {
+            color: rgba(230, 57, 70, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .service-card p {
+            color: #888;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: var(--text);
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 100px 5%;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 1px solid #111;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .contact-info {
+            text-align: right;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; align-items: flex-start; gap: 40px; }
+            .contact-info { text-align: left; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">ROHA NAIL</div>
-  <nav>
-    <a href="#works">Работы</a>
-    <a href="#price">Прайс</a>
-    <a href="#contact">Адрес</a>
-  </nav>
-</header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="brand-badge">Bishkek · Kyrgyzstan</div>
+            <h1>Restart<br>Detailing</h1>
+            <p>Эксклюзивный уход за автомобилями премиум-класса. Восстанавливаем эстетику, защищаем инвестиции.</p>
+            <a href="https://wa.me/996705922229" class="btn-premium">Записаться</a>
+        </div>
+    </section>
 
-<section class="hero">
-  <h1>Эстетика твоих рук</h1>
-  <p>Костанай • Roha Nail</p>
-  <a class="btn" href="https://wa.me/77762692129">Записаться</a>
-</section>
+    <section class="services">
+        <div class="section-header">
+            <h2>Услуги</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3>Оклейка кузова</h3>
+                <p>Защита от сколов и царапин премиальной полиуретановой пленкой с эффектом самовосстановления.</p>
+                <div class="price-tag">от 80 000 KGS</div>
+            </div>
 
-<section class="section" id="works">
-  <h2>Мои работы</h2>
-  <div class="grid">
-    <div class="work-card">
-      <img src="ССЫЛКА_НА_ФОТО_1" alt="Маникюр Костанай Roha Nail">
-    </div>
-    <div class="work-card">
-      <img src="ССЫЛКА_НА_ФОТО_2" alt="Дизайн ногтей Костанай">
-    </div>
-    <div class="work-card">
-      <img src="ССЫЛКА_НА_ФОТО_3" alt="Педикюр Костанай">
-    </div>
-  </div>
-</section>
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3>Полировка</h3>
+                <p>Многоэтапное восстановление лака до состояния "нового автомобиля" из салона.</p>
+                <div class="price-tag">от 45 000 KGS</div>
+            </div>
 
-<section class="section" id="price">
-  <h2>Услуги и цены</h2>
-  <div class="grid">
-    <div class="price-group">
-      <h3>Педикюр</h3>
-      <div class="price-item"><span>Обработка пальчиков</span> <span class="price-val">4 000₸</span></div>
-      <div class="price-item"><span>Обработка стоп (Smart)</span> <span class="price-val">3 000₸</span></div>
-      <div class="price-item"><span>Полная обработка</span> <span class="price-val">6 000₸</span></div>
-      <div class="price-item"><span>Покрытие (снятие/обработка)</span> <span class="price-val">7 000₸</span></div>
-      <div class="price-item"><span>Покрытие + Стопы</span> <span class="price-val">10 000₸</span></div>
-      <div class="price-item"><span>Снятие без покрытия</span> <span class="price-val">1 000₸</span></div>
-    </div>
-    <div class="price-group" style="display: flex; flex-direction: column; justify-content: center;">
-      <div class="info-card">
-        <h3>Запись новеньких</h3>
-        <p>По предоплате <strong>2 000₸</strong></p>
-        <p style="font-size: 12px; color: var(--gray); margin-top: 10px;">
-          При отмене записи день в день, предоплата не возвращается. При посещении сумма минусуется от услуги.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3>Керамика</h3>
+                <p>Нанесение защитного слоя 9H для зеркального блеска и мощного гидрофобного эффекта.</p>
+                <div class="price-tag">от 35 000 KGS</div>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="reviews">
-  <h2>Отзывы клиентов</h2>
-  <div class="grid">
-    <div class="review-card">
-      <img src="" alt="Отзыв о маникюре" class="review-img">
-      <span class="review-text">"Лучшая! Обожаю этот нежный френч с блестками, держится идеально."</span>
-      <span class="review-author">— @muftahovaalena</span>
-    </div>
-    <div class="review-card">
-      <img src="ССЫЛКА_НА_ФОТО_НОГТЕЙ_ИЗ_ОТЗЫВА_2" alt="Отзыв Roha Nail" class="review-img">
-      <span class="review-text">"Очень аккуратно и быстро. Райхан — мастер своего дела."</span>
-      <span class="review-author">— @amrlvlu</span>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <h2>Контакты</h2>
-  <div style="text-align: center;">
-    <p style="font-size: 22px; color: var(--accent);">ул. Баймагамбетова, 160</p>
-    <p>4 этаж, 436 кабинет</p>
-    <a class="btn" href="https://wa.me/77762692129">Записаться через WhatsApp</a>
-    <p style="font-size: 14px; color: var(--gray); margin-top: 20px;">Принимаю по предварительной записи</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Roha Nail Костанай. Дизайн и разработка: Кирилл</p>
-</footer>
+    <footer>
+        <div class="footer-logo">RESTART.</div>
+        <div class="contact-info">
+            <p>Бишкек, пр. Жибек жолу 4</p>
+            <p>+996 705 922 229</p>
+        </div>
+    </footer>
 
 </body>
 </html>
